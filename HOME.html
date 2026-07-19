@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veera Contracts | Commercial HVAC Solutions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Montserrat:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* GLOBAL & VARIABLES */
+        :root {
+            --brand-blue: #22618B;
+            --brand-cyan: #72bdd0;
+            --brand-cream: #fef6eb;
+            --brand-medium: #548dab;
+        }
+
+        #fitclass-master-wrapper {
+            background-color: #050505;
+            color: #fef6eb;
+            overflow-x: hidden;
+        }
+
+        /* LENIS RECOMMENDED CSS */
+        html.lenis,
+        html.lenis body {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+
+        /* WHY CHOOSE US */
+
+.why-section{
+    padding:110px 8%;
+    background:#050505;
+}
+
+.container{
+    max-width:1300px;
+    margin:auto;
+}
+
+.section-heading{
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+    margin-bottom:70px;
+}
+
+.section-heading span{
+    color:#72bdd0;
+    font-weight:700;
+    letter-spacing:3px;
+    font-size:14px;
+}
+
+.section-heading h2{
+    color:#fff;
+    font-size:48px;
+    margin:20px 0;
+    line-height:1.2;
+}
+
+.section-heading p{
+    color:#bcbcbc;
+    line-height:1.8;
+    font-size:17px;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.why-card{
+
+    background:#111;
+
+    padding:40px 35px;
+
+    border-radius:15px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.why-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:4px;
+
+    background:#72bdd0;
+
+    transition:.4s;
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#72bdd0;
+
+}
+
+.why-card:hover::before{
+
+    width:100%;
+
+}
+
+.why-icon{
+
+    width:70px;
+
+    height:70px;
+
+    background:#22618B;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    color:white;
+
+    margin-bottom:25px;
+
+    transition:.4s;
+
+}
+
+.why-card:hover .why-icon{
+
+    background:#72bdd0;
+
+    color:#050505;
+
+    transform:rotate(360deg);
+
+}
+
+.why-card h3{
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.why-card p{
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+@media(max-width:992px){
+
+.why-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.section-heading h2{
+
+font-size:34px;
+
+}
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+        /* form*/
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .quote-section {
+            background: #123764;
+            padding: 60px 6%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-container {
+            max-width: 1400px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .quote-line {
+            display: block;
+            width: 70px;
+            height: 5px;
+            background: #18baf5;
+            margin-bottom: 35px;
+        }
+
+        .quote-content h2 {
+            font-size: 2.3rem;
+            color: #18baf5;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 25px;
+        }
+
+        .quote-content p {
+            color: #d7d7d7;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .info-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 22px;
+        }
+
+        .icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(255, 255, 255, .08);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #18baf5;
+            font-size: 18px;
+            margin-right: 16px;
+        }
+
+        .info-box span {
+            color: #b9c5d6;
+            font-size: 15px;
+        }
+
+        .info-box h4 {
+            color: #fff;
+            font-size: 1.24rem;
+            margin-top: 5px;
+        }
+
+        .quote-form {
+            background: #fff;
+            border-radius: 12px;
+            padding: 35px;
+        }
+
+        .form-group {
+            margin-bottom: 28px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #16395e;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #d5d5d5;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            transition: .3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+
+            border-color: #19b4ef;
+        }
+
+        .quote-form button {
+
+            width: 100%;
+            background: #18aee6;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .quote-form button:hover {
+
+            background: #1298c9;
+        }
+
+        @media(max-width:992px) {
+
+            .quote-container {
+
+                grid-template-columns: 1fr;
+            }
+
+            .quote-content {
+
+                text-align: center;
+            }
+
+            .quote-line {
+
+                margin: auto auto 35px;
+            }
+
+            .info-box {
+
+                justify-content: center;
+            }
+
+            .quote-content h2 {
+
+                font-size: 2.3rem;
+            }
+        }
+
+        /* --- HERO & MEMBERSHIP STYLES --- */
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .video-bg {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: brightness(0.9) contrast(1.1);
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(5, 5, 5, 0.3) 0%, rgba(34, 97, 139, 0.1) 50%, #050505 100%);
+            z-index: 1;
+        }
+
+        .premium-title {
+            font-weight: 700;
+            line-height: 0.95;
+            color: var(--brand-cream);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .electric-text {
+            background: linear-gradient(90deg, var(--brand-cream) 0%, var(--brand-blue) 45%, #fff 50%, var(--brand-cyan) 55%, var(--brand-cream) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            animation: electricFlow 3s linear infinite;
+        }
+
+        .electric-border-container {
+            display: inline-block;
+            position: relative;
+            padding: 12px 40px;
+            margin-top: 12px;
+            border-radius: 100px;
+            border: 2px solid var(--brand-cyan);
+            box-shadow: 0 0 15px var(--brand-cyan), inset 0 0 10px rgba(114, 189, 208, 0.2);
+            animation: borderPulse 2s infinite alternate;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+        }
+
+        @keyframes borderPulse {
+            0% {
+                border-color: var(--brand-cyan);
+                box-shadow: 0 0 10px var(--brand-cyan), inset 0 0 5px var(--brand-cyan);
+            }
+
+            100% {
+                border-color: #fff;
+                box-shadow: 0 0 25px var(--brand-blue), inset 0 0 15px var(--brand-blue);
+            }
+        }
+
+        @keyframes electricFlow {
+            0% {
+                background-position: 200% center;
+            }
+
+            100% {
+                background-position: -200% center;
+            }
+        }
+
+
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-top: 37px;
+        }
+
+        .button {
+            padding: 18px 27px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: .5px;
+            transition: transform .2s, background .2s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+        .button-primary {
+            background: var(--blue);
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #37c4f2;
+        }
+
+        .button-outline {
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .7);
+            background: rgba(4, 24, 37, .68);
+        }
+
+        .button-outline span {
+            margin-left: 15px;
+            font-size: 18px;
+        }
+
+        .pillar-title {
+            font-size: 1.6rem;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            transition: color 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pillar-card:hover .pillar-title {
+            color: var(--brand-cyan);
+        }
+
+        .pillar-desc {
+            color: #999;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            transition: color 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pillar-card:hover .pillar-desc {
+            color: #fef6eb;
+        }
+
+        /* NEW MIRRORED HOVER STYLES FOR BENTO CARDS */
+        .fc-card-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            color: #fff !important;
+            margin-bottom: 1.5rem;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .fc-card-icon i {
+            color: inherit !important;
+            transition: inherit;
+        }
+
+        .fc-bento-card:hover .fc-card-icon {
+            background: var(--brand-cyan);
+            color: #050505 !important;
+            transform: scale(1.1) translateY(-5px) rotate(5deg);
+            border-color: var(--brand-cyan);
+            box-shadow: 0 10px 20px rgba(114, 189, 208, 0.3);
+        }
+
+        .fc-card-title {
+            font-size: 1.5rem;
+            line-height: 1;
+            text-transform: uppercase;
+            color: white !important;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .fc-bento-card:hover .fc-card-title {
+            color: var(--brand-cyan) !important;
+        }
+
+        .fc-card-desc {
+            font-size: 0.85rem;
+            color: #999 !important;
+            line-height: 1.4;
+            opacity: 0.8;
+            transition: color 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .fc-bento-card:hover .fc-card-desc {
+            color: #fef6eb !important;
+            opacity: 1;
+        }
+
+        .fc-benefit-header-line {
+            width: 0;
+            height: 2px;
+            background: var(--brand-cyan);
+            transition: width 1s ease;
+        }
+
+        .fc-header-active .fc-benefit-header-line {
+            width: 100px;
+        }
+
+        /* --- WHATSAPP FLOATING BUTTON --- */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            color: white;
+        }
+
+        .whatsapp-float::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #25D366;
+            border-radius: 50%;
+            z-index: -1;
+            animation: whatsapp-pulse 2s infinite;
+        }
+
+        @keyframes whatsapp-pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(1.6);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <a href="https://wa.me/917082998913" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div id="fitclass-master-wrapper" class="antialiased">
+
+        <header class="relative mt-0 pt-0 w-full min-h-[85vh] flex flex-col justify-center items-center overflow-hidden"
+            id="hero" style="margin-top: -21px;">
+            <div class="video-container">
+                <video class="video-bg" id="heroVideo" autoplay loop muted defaultMuted playsinline webkit-playsinline
+                    preload="auto">
+                    <source src="Media\HeroVideo.mp4"
+                        type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+
+            <div
+                class="relative z-10 w-full max-w-7xl px-6 flex flex-col items-center text-center pt-32 md:pt-24 pb-16">
+                <div class="overflow-hidden mb-4">
+                    <p
+                        class="text-[#72bdd0] font-bold tracking-[0.3em] uppercase text-sm md:text-base hero-eyebrow font-['Montserrat']">
+                        #Engineering Comfort
+                    </p>
+                </div>
+                <div class="relative">
+                    <div class="overflow-hidden flex flex-col items-center">
+                        <h1
+                            class="premium-title text-[4rem] md:text-[3.5rem] lg:text-[7.5rem] hero-title electric-text leading-tight">
+                            Engineering<br>
+                        </h1>
+                        <div class="electric-border-container hero-title">
+                            <span class="premium-title text-[2.7rem] md:text-[5rem] lg:text-[6.5rem] electric-text">Next
+                                Generation</span>
+                        </div>
+                        <h1
+                            class="premium-title text-[3.5rem] md:text-[7rem] lg:text-[7.5rem] hero-title electric-text leading-tight">
+                            Climate Control<br>
+                        </h1>
+                    </div>
+                </div>
+                <div class="overflow-hidden mt-8 max-w-2xl">
+                    <p
+                        class="text-[#fef6eb] text-lg md:text-xl font-light leading-relaxed hero-desc font-['Montserrat'] opacity-90">
+                        Gurugram’s premier commercial HVAC turnkey contractor delivering energy-efficient ventilation,
+                        cooling, and air management systems tailored for corporate spaces, industrial units, and
+                        high-rise developments.
+                    </p>
+                </div>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#contact">Get a Project Quote</a>
+                    <a class="button button-outline" href="tel:+911234567890">Speak to an Expert <span
+                            aria-hidden="true">→</span></a>
+                </div>
+            </div>
+    </div>
+    </header>
+
+    </div>
+
+    <section class="why-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>WHY CHOOSE US</span>
+            <h2>Engineering Excellence Built Around Your Business</h2>
+
+            <p>
+                Veera Contracts delivers complete HVAC engineering solutions
+                backed by technical expertise, quality workmanship, and
+                dependable after-sales support for commercial and industrial
+                projects across India.
+            </p>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="fas fa-drafting-compass"></i>
+                </div>
+
+                <h3>Custom HVAC Design</h3>
+
+                <p>
+                    Every project is engineered specifically for your building,
+                    ensuring maximum efficiency and long-term performance.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+
+                <h3>Turnkey Execution</h3>
+
+                <p>
+                    From planning and procurement to installation,
+                    commissioning and testing, we manage everything.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+
+                <h3>Energy Efficient Systems</h3>
+
+                <p>
+                    We design systems that reduce operating costs while
+                    maintaining superior indoor comfort.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="fas fa-user-cog"></i>
+                </div>
+
+                <h3>Experienced Engineers</h3>
+
+                <p>
+                    Our skilled mechanical engineers ensure every project meets
+                    industry standards and client expectations.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+
+                <h3>PAN India Projects</h3>
+
+                <p>
+                    We execute HVAC solutions for offices, hospitals,
+                    manufacturing plants and commercial buildings nationwide.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+
+                <h3>24/7 Support</h3>
+
+                <p>
+                    Our support team provides quick assistance,
+                    preventive maintenance and emergency service whenever needed.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <section id="contact" class="quote-section">
+        <div class="quote-container">
+
+            <!-- Left Side -->
+            <div class="quote-content">
+
+                <span class="quote-line"></span>
+
+                <h2>
+                    Ready to Optimize Your
+                    <br>
+                    Infrastructure?
+                </h2>
+
+                <p>
+                    Let our expert mechanical engineering division design a
+                    high-performance system for your structural layout.
+                </p>
+
+                <div class="info-box">
+                    <div class="icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+
+                    <div>
+                        <span>Founder</span>
+                        <h4>Bhupender Jangra</h4>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+
+                    <div>
+                        <span>Direct Hotline</span>
+                        <h4>+91 9911084500</h4>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+
+                    <div>
+                        <span>Service Location</span>
+                        <h4>PAN India</h4>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="quote-form">
+
+                <form>
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" placeholder="Enterprise Pvt Ltd">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Project Requirements / Estimated Tonnage</label>
+                        <textarea rows="6"
+                            placeholder="Briefly describe your space or cooling capacity requirements..."></textarea>
+                    </div>
+
+                    <button type="submit">
+                        Submit Project Brief
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+    <script>
+        let lenis;
+
+        // --- GLOBALLY EXPOSE FUNCTIONS TO FIX CACHING / INCOGNITO ISSUES ---
+        window.openInquiry = function (planName) {
+            try {
+                const planNameSpan = document.getElementById('planName');
+                const modal = document.getElementById('inquiryModal');
+                if (planNameSpan) planNameSpan.innerText = planName || "Fitclass";
+                if (modal) {
+                    modal.classList.add('active');
+                    modal.style.display = 'flex';
+                }
+                document.body.style.overflow = 'hidden';
+                if (typeof lenis !== 'undefined' && lenis) lenis.stop();
+                // Force a resize event so forminator recalculates layout
+                setTimeout(() => { window.dispatchEvent(new Event('resize')); }, 100);
+            } catch (e) { console.error("Modal Error: ", e); }
+        };
+
+        window.closeInquiry = function (e) {
+            if (e) e.preventDefault();
+            try {
+                const modal = document.getElementById('inquiryModal');
+                if (modal) {
+                    modal.classList.remove('active');
+                    setTimeout(() => { modal.style.display = ''; }, 300);
+                }
+                document.body.style.overflow = '';
+                if (typeof lenis !== 'undefined' && lenis) lenis.start();
+            } catch (e) { console.error("Modal Close Error: ", e); }
+        };
+
+        window.openDemoModal = function (e) {
+            if (e) e.preventDefault();
+            window.openInquiry('Free Demo');
+        };
+
+        window.closeDemoModal = window.closeInquiry;
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Modal Click-Outside Listener
+            const modal = document.getElementById('inquiryModal');
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) window.closeInquiry();
+                });
+            }
+
+            // 1. SAFE INIT LENIS
+            try {
+                if (typeof Lenis !== 'undefined') {
+                    lenis = new Lenis({
+                        duration: 0.8,
+                        wheelMultiplier: 1.5,
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                        direction: 'vertical',
+                        smooth: true
+                    });
+                    if (typeof ScrollTrigger !== 'undefined') {
+                        lenis.on('scroll', ScrollTrigger.update);
+                    }
+                    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+                    requestAnimationFrame(raf);
+                }
+            } catch (e) { console.warn("Lenis load skipped", e); }
+
+            // 2. SAFE INIT GSAP
+            try {
+                if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                    gsap.registerPlugin(ScrollTrigger);
+
+                    // HERO ANIMATIONS
+                    const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+                    heroTl.fromTo(".hero-eyebrow", { opacity: 0 }, { opacity: 1, duration: 0.8, delay: 0.2 })
+                        .fromTo(".hero-title", { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 1.2 }, "-=0.4")
+                        .fromTo(".hero-desc", { opacity: 0 }, { opacity: 1, duration: 0.8 }, "-=0.8")
+                        .fromTo(".hero-btn", { opacity: 0 }, { opacity: 1, duration: 0.8 }, "-=0.6");
+
+                    // MEMBERSHIP ANIMATIONS
+                    gsap.to(".section-header, .section-subheader", { scrollTrigger: { trigger: "#membership", start: "top 80%", toggleActions: "play none none none" }, y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power2.out" });
+                    gsap.to(".plan-card", { scrollTrigger: { trigger: "#membership", start: "top 70%", toggleActions: "play none none none" }, y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "back.out(1.2)" });
+
+                    // PILLARS OF PERFORMANCE ANIMATIONS
+                    gsap.set(".pillar-card", { y: 60, opacity: 0 });
+                    gsap.to(".pillar-card", {
+                        scrollTrigger: {
+                            trigger: "#services",
+                            start: "top 75%",
+                            toggleActions: "play none none none"
+                        },
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        stagger: 0.1,
+                        ease: "power3.out"
+                    });
+
+                    // GALLERY TEXT ANIMATION
+                    gsap.to("#textFill", { height: "100%", ease: "none", scrollTrigger: { trigger: "#gallery", start: "top bottom", end: "bottom bottom", scrub: true } });
+
+                    // BENEFITS SECTION ANIMATIONS
+                    ScrollTrigger.create({
+                        trigger: ".fc-reveal-header",
+                        start: "top 80%",
+                        onEnter: () => {
+                            const el = document.querySelector(".fc-reveal-header");
+                            if (el) el.classList.add("fc-header-active");
+                        }
+                    });
+                    gsap.from(".fc-reveal-header h2, .fc-reveal-header span", { y: 30, opacity: 0, duration: 1, stagger: 0.2, scrollTrigger: { trigger: ".fc-reveal-header", start: "top 80%" } });
+
+                    // FIXED ANIMATION TO EXACTLY MATCH PILLARS OF PERFORMANCE
+                    gsap.set(".fc-bento-card", { y: 60, opacity: 0 });
+                    gsap.to(".fc-bento-card", {
+                        scrollTrigger: {
+                            trigger: "#fc-benefits",
+                            start: "top 75%",
+                            toggleActions: "play none none none"
+                        },
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        stagger: 0.1,
+                        ease: "power3.out"
+                    });
+
+                } else {
+                    console.warn("GSAP not loaded. Skipping animations.");
+                }
+            } catch (err) { console.error("GSAP Error", err); }
+
+            // 3. VIDEO AUTOPLAY FALLBACKS
+            try {
+                const bgVideo = document.getElementById('heroVideo');
+                if (bgVideo) {
+                    bgVideo.muted = true;
+                    let playPromise = bgVideo.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(error => {
+                            document.body.addEventListener('touchstart', () => { bgVideo.play(); }, { once: true });
+                            document.body.addEventListener('click', () => { bgVideo.play(); }, { once: true });
+                            document.body.addEventListener('scroll', () => { bgVideo.play(); }, { once: true });
+                        });
+                    }
+                }
+
+                const victoryVideo = document.getElementById('victoryVideo');
+                if (victoryVideo) {
+                    victoryVideo.muted = true;
+                    let vPromise = victoryVideo.play();
+                    if (vPromise !== undefined) {
+                        vPromise.catch(error => {
+                            document.body.addEventListener('touchstart', () => { victoryVideo.play(); }, { once: true });
+                            document.body.addEventListener('click', () => { victoryVideo.play(); }, { once: true });
+                            document.body.addEventListener('scroll', () => { victoryVideo.play(); }, { once: true });
+                        });
+                    }
+                }
+            } catch (e) { }
+
+            // 4. SPOTLIGHT MOUSE EFFECTS
+            try {
+                const pillarGrid = document.getElementById("pillar-grid");
+                const pillarCards = document.querySelectorAll(".pillar-card");
+                if (pillarGrid) {
+                    pillarGrid.onmousemove = e => {
+                        for (const card of pillarCards) {
+                            const rect = card.getBoundingClientRect(), x = e.clientX - rect.left, y = e.clientY - rect.top;
+                            card.style.setProperty("--mouse-x", `${x}px`);
+                            card.style.setProperty("--mouse-y", `${y}px`);
+                        }
+                    };
+                }
+
+                const fcWrapper = document.getElementById("fc-cards");
+                const fcCards = document.querySelectorAll(".fc-bento-card");
+                if (fcWrapper) {
+                    fcWrapper.onmousemove = e => {
+                        for (const card of fcCards) {
+                            const rect = card.getBoundingClientRect(), x = e.clientX - rect.left, y = e.clientY - rect.top;
+                            card.style.setProperty("--mouse-x", `${x}px`);
+                            card.style.setProperty("--mouse-y", `${y}px`);
+                        }
+                    };
+                }
+            } catch (e) { }
+
+            // 5. 3D TILT EFFECT
+            try {
+                const allTiltCards = document.querySelectorAll('[data-tilt]');
+                allTiltCards.forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left, y = e.clientY - rect.top;
+                        const centerX = rect.width / 2, centerY = rect.height / 2;
+                        const rotateX = ((y - centerY) / centerY) * -5;
+                        const rotateY = ((x - centerX) / centerX) * 5;
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`;
+                    });
+                });
+            } catch (e) { }
+        });
+    </script>
+    <div id="site-footer"></div>
+    <script src="shared-layout.js"></script>
+</body>
+
+</html>

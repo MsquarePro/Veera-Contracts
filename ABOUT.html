@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* BRAND COLORS */
+        :root {
+            --brand-blue: #22618B;
+            --brand-cyan: #72bdd0;
+            --brand-cream: #fef6eb;
+            --brand-dark: #050505;
+        }
+
+        /* LENIS SCROLL FIXES */
+        html.lenis, html.lenis body { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto !important; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+        .lenis.lenis-scrolling iframe { pointer-events: none; }
+
+        body {
+            background-color: var(--brand-dark);
+            color: var(--brand-cream);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {  text-transform: uppercase; }
+
+        
+
+        /* HERO STYLES */
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 120%;
+            object-fit: cover;
+            opacity: 0.4;
+            filter: grayscale(80%) contrast(1.2);
+            z-index: 0;
+        }
+        .hero-gradient {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(5,5,5,0.2) 0%, rgba(5,5,5,1) 100%);
+            z-index: 1;
+        }
+
+
+        .about-section{
+    position:relative;
+    padding:110px 7%;
+    background:
+        radial-gradient(circle at top left,rgba(34,97,139,.18),transparent 45%),
+        radial-gradient(circle at bottom right,rgba(114,189,208,.12),transparent 40%),
+        #050505;
+}
+
+.about-section::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:140px;
+    height:4px;
+    background:linear-gradient(90deg,#22618B,#72bdd0);
+    border-radius:30px;
+}
+        .about-container{
+    max-width:1300px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
+}
+
+@media(max-width:992px){
+
+.about-container{
+
+grid-template-columns:1fr;
+gap:50px;
+
+}
+
+}
+        /* LEFT SIDE */
+
+        .left-content{
+    color:#d8d8d8;
+}
+
+.quote-box{
+
+    position:relative;
+
+    padding:25px 0 25px 35px;
+
+    margin-bottom:45px;
+
+    border-left:4px solid #72bdd0;
+
+}
+
+.quote-box p{
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    color:#ffffff;
+
+    font-style:italic;
+
+    opacity:.95;
+
+}
+
+.description{
+
+    color:#bdbdbd;
+
+    font-size:17px;
+
+    line-height:2;
+
+}
+
+        /* RIGHT SIDE */
+
+        .right-content{
+            flex:1;
+            min-width:350px;
+        }
+
+        .feature-card{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:32px;
+
+    margin-bottom:28px;
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.feature-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:5px;
+    height:100%;
+
+    background:linear-gradient(#22618B,#72bdd0);
+
+}
+
+.feature-card:hover{
+
+    transform:translateX(10px);
+
+    border-color:#72bdd0;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.35),
+    0 0 30px rgba(114,189,208,.15);
+
+}
+
+        .feature-title{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.feature-title i{
+
+    width:58px;
+    height:58px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#22618B,#72bdd0);
+
+    color:#fff;
+
+    font-size:24px;
+
+    margin-right:20px;
+
+}
+
+.feature-title h3{
+
+    color:#ffffff;
+
+    font-size:22px;
+
+    margin:0;
+
+    letter-spacing:.03em;
+
+}
+        .feature-card p{
+
+    color:#c8c8c8;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    padding-left:78px;
+
+}
+
+        @media(max-width:900px){
+
+            .about-container{
+                flex-direction:column;
+            }
+
+            .feature-card{
+                margin-bottom:20px;
+            }
+
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div id="site-header"></div>
+
+    <header class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+        <img src="Media\pic2.jpeg" class="hero-bg" id="heroBg" alt="Commercial HVAC Services">
+        <div class="hero-gradient"></div>
+
+        <div class="relative z-10 max-w-5xl mt-20">
+            <span class="text-[#72bdd0] text-sm font-bold tracking-[0.3em] uppercase block mb-6 hero-anim">Welcome To Veera Contracts</span>
+            <h1 class="text-6xl md:text-9xl text-white mb-6 hero-anim leading-none font-['Antonio'] uppercase">
+                ABOUT <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#22618B] to-[#72bdd0]" style="font-family: 'Antonio', sans-serif !important;">US</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed hero-anim">
+                "Founded by industry visionary Bhupender Jangra, Veera Contracts Pvt. Ltd. has established itself as a trusted partner in commercial HVAC projects across Gurugram."
+            </p>
+        </div>
+    </header>
+
+    <section class="about-section">
+
+    <div class="about-container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="left-content">
+
+            <div class="quote-box">
+                <p>
+                    "Founded by industry visionary Bhupender Jangra,
+                    Veera Contracts Pvt. Ltd. has established itself as
+                    a trusted partner in commercial HVAC projects across
+                    Gurugram."
+                </p>
+            </div>
+
+            <p class="description">
+                Combining heavy-duty mechanical engineering principles with modern
+                energy conservation, we bridge the gap between complex architectural
+                blueprints and sustainable environmental systems. Much like global
+                MEP giants, we manage everything from load calculations to flawless
+                mechanical execution. Whether it is indoor air quality enhancement
+                or massive central chilling plants, our engineering ensures your
+                asset breathes perfectly.
+            </p>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="right-content">
+
+            <div class="feature-card">
+
+                <div class="feature-title">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                    <h3>Precision Engineering</h3>
+                </div>
+
+                <p>
+                    Every duct layout and chill-load calculation is tailored
+                    to maximize cooling performance.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-title">
+                    <i class="fa-solid fa-leaf"></i>
+                    <h3>Sustainability First</h3>
+                </div>
+
+                <p>
+                    Lowering your building’s carbon footprint with smart,
+                    energy-efficient operations.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-title">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3>Turnkey Execution</h3>
+                </div>
+
+                <p>
+                    From design conceptualization to post-commissioning
+                    maintenance—one unified expert team.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    
+
+   
+    <script>
+        // 1. Lenis Smooth Scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smooth: true
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // 2. GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Parallax & Fade
+        gsap.to("#heroBg", {
+            yPercent: 20,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "header",
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        tl.from(".hero-anim", {
+            y: 30,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.15,
+            delay: 0.2
+        });
+
+        // Left/Right Reveals - Fixed using fromTo to guarantee visibility
+        gsap.fromTo(".reveal-left", 
+            { x: -50, opacity: 0 },
+            { x: 0, opacity: 1, duration: 1, scrollTrigger: { trigger: "#mission-section", start: "top 75%" } }
+        );
+
+        gsap.fromTo(".reveal-right .glass-card", 
+            { x: 50, opacity: 0 },
+            { x: 0, opacity: 1, duration: 0.8, stagger: 0.15, scrollTrigger: { trigger: "#mission-section", start: "top 75%" } }
+        );
+
+        // Fixed Reveal for the "Difference" Section
+        gsap.fromTo(".reveal-header", 
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.8, scrollTrigger: { trigger: "#difference-section", start: "top 80%" } }
+        );
+
+        gsap.fromTo(".diff-card", 
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, scrollTrigger: { trigger: "#difference-grid", start: "top 80%" } }
+        );
+
+        // Vision Scale/Fade
+        gsap.fromTo(".vision-container", 
+            { scale: 0.9, opacity: 0 },
+            { scale: 1, opacity: 1, duration: 1.5, ease: "power2.out", scrollTrigger: { trigger: ".vision-container", start: "top 75%" } }
+        );
+
+        // 3. Difference Section Mouse Spotlight Effect
+        const diffGrid = document.getElementById("difference-grid");
+        const diffCards = document.querySelectorAll(".diff-card");
+        if(diffGrid) {
+            diffGrid.onmousemove = e => {
+                for(const card of diffCards) {
+                    const rect = card.getBoundingClientRect(), x = e.clientX - rect.left, y = e.clientY - rect.top;
+                    card.style.setProperty("--mouse-x", `${x}px`);
+                    card.style.setProperty("--mouse-y", `${y}px`);
+                }
+            };
+        }
+
+        // 4. Mission Section Mouse Spotlight Effect
+        const missionGrid = document.getElementById("mission-grid");
+        const missionCards = document.querySelectorAll(".mission-card");
+        if(missionGrid) {
+            missionGrid.onmousemove = e => {
+                for(const card of missionCards) {
+                    const rect = card.getBoundingClientRect(), x = e.clientX - rect.left, y = e.clientY - rect.top;
+                    card.style.setProperty("--mouse-x", `${x}px`);
+                    card.style.setProperty("--mouse-y", `${y}px`);
+                }
+            };
+        }
+
+        // 5. MODAL LOGIC (NEW)
+        const modal = document.getElementById('journeyModal');
+        const modalContent = modal.querySelector('div');
+
+        function openModal() {
+            // Pause smooth scrolling so the background doesn't move when modal is open
+            lenis.stop();
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            // Trigger a reflow so the transition works
+            void modal.offsetWidth;
+            
+            modal.classList.remove('opacity-0');
+            modalContent.classList.remove('scale-95');
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            
+            // Wait for transition to finish before hiding
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                // Resume smooth scrolling
+                lenis.start();
+            }, 300);
+        }
+
+        // Close modal if user clicks outside the white box
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+    </script>
+    <div id="site-footer"></div>
+    <script src="shared-layout.js"></script>
+</body>
+</html>
